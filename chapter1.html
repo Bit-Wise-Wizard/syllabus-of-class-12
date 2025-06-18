@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Database Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a0ca3;
+            --secondary: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-bar {
+            background-color: white; /* Updated color */
+            padding: 1.5rem 0; /* Increased padding */
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.5rem; /* Increased font size */
+            padding: 0.75rem 1.5rem; /* Increased padding */
+            border: 2px solid var(--primary);
+            border-radius: 25px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            color: var(--primary);
+        }
+
+        .questions {
+            margin-top: 2rem;
+            background: var(--light);
+            border: 1px solid var(--gray);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .questions h4 {
+            color: var(--dark);
+        }
+
+        .contact-container {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            background: white;
+            color: var(--dark);
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+        }
+
+        .contact-button i {
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Chapter 1: Database Management System</h1>
+</header>
+
+<div class="nav-bar">
+    <a href="index.html">Home</a>
+    <a href="chapter1.html">Chapter 1</a>
+    <a href="chapter2.html">Chapter 2</a>
+    <a href="chapter3.html">Chapter 3</a>
+    <a href="chapter4.html">Chapter 4</a>
+    <a href="chapter5.html">Chapter 5</a>
+    <a href="chapter6.html">Chapter 6</a>
+    <a href="chapter7.html">Chapter 7</a>
+</div>
+
+<section class="content">
+    <h2>Introduction to Database Management System</h2>
+    <p>A Database Management System (DBMS) is software that interacts with end users, applications, and the database itself to capture and analyze data. It provides a systematic way to store, retrieve, and manage data.</p>
+
+    <h3>Features of Information</h3>
+    <ul>
+        <li><span class="term" data-definition="The correctness of data.">Accuracy</span></li>
+        <li><span class="term" data-definition="All necessary data is present.">Completeness</span></li>
+        <li><span class="term" data-definition="Data is consistent across the database.">Consistency</span></li>
+        <li><span class="term" data-definition="Data is up-to-date and available when needed.">Timeliness</span></li>
+    </ul>
+
+    <h3>Terminologies in Database</h3>
+    <ul>
+        <li><strong>Table:</strong> A collection of related data entries.</li>
+        <li><strong>Field:</strong> A single piece of data.</li>
+        <li><strong>Record:</strong> A complete set of fields.</li>
+        <li><strong>Tuple:</strong> Another term for a record.</li>
+        <li><strong>Object:</strong> An instance of a class in databases.</li>
+        <li><strong>Keys:</strong> Unique identifiers for records.</li>
+    </ul>
+
+    <h3>Data Dictionary</h3>
+    <p>A data dictionary is a centralized repository of information about data, including meanings, relationships to other data, origin, usage, and format.</p>
+
+    <h3>Database Management System Overview</h3>
+    <p>DBMS is essential for efficient data management, enabling multiple users to access and manipulate data concurrently.</p>
+
+    <h3>Objectives of DBMS</h3>
+    <ul>
+        <li>Data storage, retrieval, and management.</li>
+        <li>Data integrity and security.</li>
+        <li>Support for multiple users.</li>
+    </ul>
+
+    <h3>Advantages and Disadvantages</h3>
+    <p><strong>Advantages:</strong> Improved data sharing, data security, and data integrity.</p>
+    <p><strong>Disadvantages:</strong> Complexity, cost, and potential performance issues.</p>
+
+    <h3>Types of Database Models</h3>
+    <ul>
+        <li>Hierarchical</li>
+        <li>Network</li>
+        <li>Relational</li>
+        <li>Entity-Relationship</li>
+    </ul>
+
+    <h3>Integrity Constraints</h3>
+    <ul>
+        <li><strong>Domain:</strong> Valid values for a given attribute.</li>
+        <li><strong>Entity:</strong> Uniqueness of entity instances.</li>
+        <li><strong>Referential:</strong> Ensures relationships between tables.</li>
+    </ul>
+
+    <h3>Normalization</h3>
+    <p>Normalization is the process of organizing data to reduce redundancy. It involves multiple normal forms, including 1NF, 2NF, and 3NF.</p>
+
+    <h3>Centralized and Distributed Databases</h3>
+    <p>Centralized databases are stored in a single location, while distributed databases spread across multiple locations.</p>
+
+    <h3>Database Security</h3>
+    <p>Database security involves protecting the database from unauthorized access and ensuring data integrity.</p>
+
+    <h3>Roles of DBA</h3>
+    <p>The Database Administrator (DBA) manages and maintains the database, ensuring its performance, integrity, and security.</p>
+
+    <div class="questions">
+        <h4>Questions</h4>
+        <ol>
+            <li>What is a DBMS and why is it important?</li>
+            <li>List the features of information.</li>
+            <li>Explain the differences between hierarchical and relational database models.</li>
+            <li>What are the advantages of normalization in databases?</li>
+            <li>Describe the roles of a Database Administrator.</li>
+        </ol>
+    </div>
+</section>
+
+<section class="contact-container">
+    <h2>Contact Me</h2>
+    <div class="contact-buttons">
+        <a href="mailto:prasiddhamainali2@gmail.com" class="contact-button"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.instagram.com/_.prasiddha_/" target="_blank" class="contact-button"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.linkedin.com/in/prasiddha-mainali-105bb0352/" target="_blank" class="contact-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="tel:+9779829098748" class="contact-button"><i class="fas fa-phone"></i> Call Me</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Prasiddha Mainali. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
