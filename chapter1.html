@@ -46,8 +46,8 @@
         }
 
         .nav-bar {
-            background-color: white; /* Updated color */
-            padding: 1.5rem 0; /* Increased padding */
+            background-color: white;
+            padding: 1.5rem 0;
             text-align: center;
         }
 
@@ -55,8 +55,8 @@
             color: var(--primary);
             text-decoration: none;
             margin: 0 1.5rem;
-            font-size: 1.5rem; /* Increased font size */
-            padding: 0.75rem 1.5rem; /* Increased padding */
+            font-size: 1.5rem;
+            padding: 0.75rem 1.5rem;
             border: 2px solid var(--primary);
             border-radius: 25px;
             transition: color 0.3s, background-color 0.3s;
@@ -102,6 +102,15 @@
 
         .questions h4 {
             color: var(--dark);
+        }
+
+        .sql-example {
+            background: #f4f4f4;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: monospace;
         }
 
         .contact-container {
@@ -243,14 +252,89 @@
     <h3>Roles of DBA</h3>
     <p>The Database Administrator (DBA) manages and maintains the database, ensuring its performance, integrity, and security.</p>
 
+    <h3>SQL Example</h3>
+    <div class="sql-example">
+        <pre>
+CREATE TABLE students (
+    Id INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Class VARCHAR(10),
+    Marks INT
+);
+
+INSERT INTO students (Id, Name, Class, Marks) VALUES
+(1, 'Anita', '11A', 90),
+(2, 'Prasiddha', '11B', 90),
+(3, 'Sita', '11C', 70),
+(4, 'Gita', '11C', 80);
+
+UPDATE students
+SET Marks = 85
+WHERE Name = 'Anita';
+
+DELETE FROM students
+WHERE Id = 3;
+
+SELECT * from students;
+        </pre>
+    </div>
+    <img src="photo1.png" alt="SQL Result" style="width:100%; max-width:600px; border-radius:10px;">
+    
     <div class="questions">
         <h4>Questions</h4>
         <ol>
-            <li>What is a DBMS and why is it important?</li>
-            <li>List the features of information.</li>
-            <li>Explain the differences between hierarchical and relational database models.</li>
-            <li>What are the advantages of normalization in databases?</li>
-            <li>Describe the roles of a Database Administrator.</li>
+            <li>
+                <strong>What is Database and DBMS? List out the advantages and disadvantages of DBMS.</strong>
+                <p>A Database is an organized collection of structured information, while a DBMS is software used to manage and interact with databases.</p>
+                <p><strong>Advantages of DBMS:</strong> Improved data sharing, data security, integrity, and reduced data redundancy.</p>
+                <p><strong>Disadvantages of DBMS:</strong> Complexity, cost, and potential performance issues.</p>
+            </li>
+            <li>
+                <strong>Differentiating between file processing system and DBMS:</strong>
+                <ul>
+                    <li>DBMS allows multiple users to access the database concurrently, while file processing systems don't.</li>
+                    <li>DBMS provides data integrity and security, whereas file processing systems lack these features.</li>
+                    <li>DBMS uses structured query language (SQL) for data manipulation; file processing systems do not.</li>
+                    <li>DBMS supports data relationships, while file processing systems do not.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Explain the different models of DBMS with advantages and disadvantages.</strong>
+                <p>The main models are:</p>
+                <ul>
+                    <li><strong>Hierarchical Model:</strong> Simple structure but lacks flexibility.</li>
+                    <li><strong>Network Model:</strong> More complex relationships but harder to design.</li>
+                    <li><strong>Relational Model:</strong> Most popular; easy to use but can be slower with large data sets.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>What is a relational database? How is it different from other database models?</strong>
+                <p>A relational database organizes data into tables that are linked by relationships. It differs by allowing complex queries via SQL, unlike hierarchical or network models.</p>
+            </li>
+            <li>
+                <strong>What is data redundancy? How does DBMS help in reducing it?</strong>
+                <p>Data redundancy is the unnecessary duplication of data. DBMS reduces it by normalizing data, organizing it to minimize duplication and dependence.</p>
+            </li>
+            <li>
+                <strong>Differentiate between centralized and distributed database systems.</strong>
+                <p>Centralized databases are stored in one location and managed by a single DBMS, while distributed databases are spread across multiple locations, allowing for greater access speed and reliability.</p>
+            </li>
+            <li>
+                <strong>Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</strong>
+                <p>A DBA is responsible for managing, maintaining, and securing databases. Major responsibilities include performance tuning, backup, recovery, and ensuring data integrity.</p>
+            </li>
+            <li>
+                <strong>Define normalization. Explain 1NF, 2NF, and 3NF with suitable examples.</strong>
+                <p>Normalization is the process of organizing data to reduce redundancy. 1NF requires atomic values; 2NF removes partial dependencies; 3NF removes transitive dependencies.</p>
+            </li>
+            <li>
+                <strong>Explain the terms: primary key, foreign key, and candidate key with examples.</strong>
+                <p>A primary key uniquely identifies a record (e.g., student ID), a foreign key links one table to another (e.g., student ID in a grades table), and candidate keys are potential primary keys (e.g., social security number).</p>
+            </li>
+            <li>
+                <strong>What is SQL? Explain its components and common functions.</strong>
+                <p>SQL (Structured Query Language) is used for managing and manipulating databases. Components include SELECT, INSERT, UPDATE, and DELETE statements. Common functions include COUNT, SUM, and AVG.</p>
+            </li>
         </ol>
     </div>
 </section>
